@@ -122,4 +122,5 @@ export SDKMAN_DIR="/home/minway/.sdkman"
 [[ -s "/home/minway/.sdkman/bin/sdkman-init.sh" ]] && source "/home/minway/.sdkman/bin/sdkman-init.sh"
 
 source ~/.profile
+
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
