@@ -36,7 +36,7 @@ bindsym Ctrl+Mod1+t exec i3-sensible-terminal
 bindsym Ctrl+Mod1+e exec spacefm
 
 # start power menu
-bindsym Ctrl+Mod1+l exec power.sh
+bindsym Ctrl+Mod1+l exec power
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -164,9 +164,9 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 set $displayMode "Set display mode [w]ork [l]aptop [h]ome"
 bindsym $mod+x mode $displayMode
 mode $displayMode {
-    bindsym w exec "~/.screenlayout/work.sh && ~/scripts/feh-wallpaper.sh" mode "default"
-    bindsym h exec "~/.screenlayout/home.sh && ~/scripts/feh-wallpaper.sh" mode "default"
-    bindsym l exec "~/.screenlayout/laptop.sh && ~/scripts/feh-wallpaper.sh" mode "default"
+    bindsym w exec "~/.screenlayout/work.sh && ~/bin/feh-wallpaper.sh" mode "default"
+    bindsym h exec "~/.screenlayout/home.sh && ~/bin/feh-wallpaper.sh" mode "default"
+    bindsym l exec "~/.screenlayout/laptop.sh && ~/bin/feh-wallpaper.sh" mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -182,6 +182,6 @@ bar {
         status_command i3status
 }
 
-exec --no-startup-id ~/scripts/feh-wallpaper.sh &
+exec --no-startup-id ~/bin/feh-wallpaper.sh &
 exec --no-startup-id synapse &
 exec --no-startup-id ~/.dropbox-dist/dropboxd &
