@@ -2,4 +2,7 @@
 
 git clone --bare git@github.com:bmwcmw/dotfiles.git .dotfiles.git
 
-dotfiles --local status.showUntrackedFiles no
+// import dotfiles command definition from .zshrc
+// install zsh + oh my zsh
+
+dotfiles config --local status.showUntrackedFiles no
